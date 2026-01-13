@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+
+# Python rác 
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.pytest_cache/
+
+# Docker rác
+.docker/
+Dockerfile
+docker-compose.yaml
+
+# Dữ liệu nặng
+data/
+*.mp4
+*.avi
+*.jpg
+*.png
+*.parquet
+
+# VS Code & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

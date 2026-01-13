@@ -1,0 +1,11 @@
+pyspark==3.0.1
+feast[redis]
+ultralytics
+opencv-python-headless
+minio
+kafka-python
+#deal with time for airflow
+pendulum
+redis
+
+

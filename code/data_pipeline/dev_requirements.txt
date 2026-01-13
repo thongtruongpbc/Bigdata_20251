@@ -1,0 +1,6 @@
+apache-airflow
+apache-airflow-providers-docker
+feast[redis]
+pandas
+pendulum
+# pyspark
