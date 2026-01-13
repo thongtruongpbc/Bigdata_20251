@@ -1,4 +1,5 @@
 version: '3.7'
+
 services:
   redis:
     image: redis:latest
@@ -12,3 +13,20 @@ services:
       timeout: 30s
       retries: 50
     restart: always
+
+  spark:
+    image: apache/spark:3.5.1
+    container_name: spark
+    environment:
+      - SPARK_MODE=master
+      - SPARK_DRIVER_MEMORY=1g
+      - SPARK_EXECUTOR_MEMORY=1g
+    ports:
+      - "4040:4040"   # Spark UI
+      - "7077:7077"   # Spark master
+    volumes:
+      - ./data_pipeline:/opt/app
+    command: >
+      /opt/spark/bin/spark-class
+      org.apache.spark.deploy.master.Master
+    restart: unless-stopped
